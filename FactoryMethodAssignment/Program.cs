@@ -15,8 +15,15 @@
     {
         static void Main(string[] args)
         {
+            #region 포션
             Potion potion = ItemFactory.Instantiate<Potion>("포션");
-
+            Potion[] potions = new Potion[5];
+            potions[0] = ItemFactory.Instantiate<Potion>("더큰포션");
+            potions[1] = ItemFactory.Instantiate<Potion>("활력포션");
+            potions[2] = ItemFactory.Instantiate<Potion>("엘릭서");
+            potions[3] = ItemFactory.Instantiate<Potion>("보라포션");
+            potions[4] = ItemFactory.Instantiate<Potion>("랜덤포션");
+            #endregion
 
             #region 무기
             Weapon weapon = ItemFactory.Instantiate<Weapon>("무기");
@@ -25,27 +32,36 @@
             weapons[1] = ItemFactory.Instantiate<Weapon>("도검"); 
             weapons[2] = ItemFactory.Instantiate<Weapon>("방망이"); 
             weapons[3] = ItemFactory.Instantiate<Weapon>("장미칼"); 
-            weapons[4] = ItemFactory.Instantiate<Weapon>("최강의검"); 
+            weapons[4] = ItemFactory.Instantiate<Weapon>("최강의검");
             #endregion
 
+            #region 음식
             Food food = ItemFactory.Instantiate<Food>("음식");
-            
-            Armor armor = ItemFactory.Instantiate<Armor>("방어구");
+            #endregion
 
+            #region 방어구
+            Armor armor = ItemFactory.Instantiate<Armor>("방어구");
+            #endregion
+
+            #region Print
             Console.WriteLine("=============================================== 아이템 정보 ===============================================");
 
             // 포션
-            Console.WriteLine($"아이템이름: {potion.name}\t\t타입: {potion.type}\t회복량: {potion.hp} \t설명: {potion.description}");
-            
+            Console.WriteLine($"아이템이름: {potion.name}\t\t타입: {potion.type}\t회복량: {potion.hp} \t설명: {potion.description}");                       // 포션
+            Console.WriteLine($"아이템이름: {potions[2].name}\t\t타입: {potions[2].type}\t회복량: {potions[2].hp} \t설명: {potions[2].description} ");      // 더큰포션
+            Console.WriteLine($"아이템이름: {potions[0].name}\t\t타입: {potions[0].type}\t회복량: {potions[0].hp} \t설명: {potions[0].description} ");      // 활력포션
+            Console.WriteLine($"아이템이름: {potions[1].name}\t\t타입: {potions[1].type}\t회복량: {potions[1].hp} \t설명: {potions[1].description} ");      // 엘릭서
+            Console.WriteLine($"아이템이름: {potions[3].name}\t\t타입: {potions[3].type}\t회복량: {potions[3].hp} \t설명: {potions[3].description} ");      // 보라포션
+            Console.WriteLine($"아이템이름: {potions[4].name}\t\t타입: {potions[4].type}\t회복량: {potions[4].hp} \t설명: {potions[4].description} ");      // 랜덤포션
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             // 무기
-            Console.WriteLine($"아이템이름: {weapon.name}\t\t타입: {weapon.type}\t데미지: {weapon.damage} \t설명: {weapon.description}");
-            Console.WriteLine($"아이템이름: {weapons[0].name}\t\t타입: {weapons[0].type}\t데미지: {weapons[0].damage} \t설명: {weapons[0].description} ");
-            Console.WriteLine($"아이템이름: {weapons[1].name}\t\t타입: {weapons[1].type}\t데미지: {weapons[1].damage} \t설명: {weapons[1].description} ");
-            Console.WriteLine($"아이템이름: {weapons[2].name}\t타입: {weapons[2].type}\t데미지: {weapons[2].damage} \t설명: {weapons[2].description} ");
-            Console.WriteLine($"아이템이름: {weapons[3].name}\t\t타입: {weapons[3].type}\t데미지: {weapons[3].damage} \t설명: {weapons[3].description} ");
-            Console.WriteLine($"아이템이름: {weapons[4].name}\t\t타입: {weapons[4].type}\t데미지: {weapons[4].damage} \t설명: {weapons[4].description} ");
-           
+            Console.WriteLine($"아이템이름: {weapon.name}\t\t타입: {weapon.type}\t데미지: {weapon.damage} \t설명: {weapon.description}");                       // 기본 단검
+            Console.WriteLine($"아이템이름: {weapons[0].name}\t\t타입: {weapons[0].type}\t데미지: {weapons[0].damage} \t설명: {weapons[0].description} ");      // 대검
+            Console.WriteLine($"아이템이름: {weapons[1].name}\t\t타입: {weapons[1].type}\t데미지: {weapons[1].damage} \t설명: {weapons[1].description} ");      // 도검
+            Console.WriteLine($"아이템이름: {weapons[2].name}\t타입: {weapons[2].type}\t데미지: {weapons[2].damage} \t설명: {weapons[2].description} ");        // 방망이
+            Console.WriteLine($"아이템이름: {weapons[3].name}\t\t타입: {weapons[3].type}\t데미지: {weapons[3].damage} \t설명: {weapons[3].description} ");      // 장미칼
+            Console.WriteLine($"아이템이름: {weapons[4].name}\t\t타입: {weapons[4].type}\t데미지: {weapons[4].damage} \t설명: {weapons[4].description} ");      // 최강의검
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             // 음식
             Console.WriteLine($"아이템이름: {food.name}\t\t타입: {food.type}\t배부름: {food.function} \t설명: {food.description}");
            
@@ -53,6 +69,9 @@
             Console.WriteLine($"아이템이름: {armor.name}\t\t타입: {armor.type}\t방어력: {armor.defense}  \t설명: {armor.description}");
 
             Console.WriteLine("==========================================================================================================");
+            #endregion
+
+
         }
     }
     

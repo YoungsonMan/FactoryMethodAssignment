@@ -18,7 +18,53 @@ namespace FactoryMethodAssignment
                 potion.name = "빨간물약";
                 potion.hp = 50;
                 potion.type = Item.ItemType.Potion;
-                potion.description = "";
+                potion.description = "피는 얼마안차지만 맛있다!";
+                return potion as T;
+            }
+            else if (name == "더큰포션")
+            {
+                Potion potion = new Potion();
+                potion.name = "왕빨간물약";
+                potion.hp = 100;
+                potion.type = Item.ItemType.Potion;
+                potion.description = "왕 빨갛당";
+                return potion as T;
+            }
+            else if (name == "활력포션")
+            {
+                Potion potion = new Potion();
+                potion.name = "활력포션";
+                potion.hp = 1000;
+                potion.type = Item.ItemType.Potion;
+                potion.description = "몸에 호랑이 기운이...!";
+                return potion as T;
+            }
+            else if (name == "엘릭서")
+            {
+                Potion potion = new Potion();
+                potion.name = "엘릭서";
+                potion.hp = 10000;
+                potion.type = Item.ItemType.Potion;
+                potion.description = "체력이 넘친다..!";
+                return potion as T;
+            }
+            else if (name == "보라포션")
+            {
+                Potion potion = new Potion();
+                potion.name = "독약";
+                potion.hp = -100;
+                potion.type = Item.ItemType.Potion;
+                potion.description = "포션을 나만 먹으란법 없잖아..!?";
+                return potion as T;
+            }
+            else if (name == "랜덤포션")
+            {
+                Potion potion = new Potion();
+                potion.name = "랜덤포션";
+                Random random = new Random();
+                potion.hp = random.Next(-10000,10000);
+                potion.type = Item.ItemType.Potion;
+                potion.description = "먹고 죽을수도 체력이 넘칠수도...!";
                 return potion as T;
             }
             #endregion

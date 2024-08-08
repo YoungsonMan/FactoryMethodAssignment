@@ -133,7 +133,52 @@ namespace FactoryMethodAssignment
                 food.name = "왕주먹밥";
                 food.function = 100;
                 food.type = Item.ItemType.Food; 
-                food.description = "";
+                food.description = "안에 들은 맛은 랜덤이다";
+                return food as T;
+            }
+            else if (name == "짜장면")
+            {
+                Food food = new Food();
+                food.name = "짜장면";
+                food.function = 1000;
+                food.type = Item.ItemType.Food;
+                food.description = "여러분 짜장 좋아해~? 아뉘. 그럼 모조아해? 짬뽕! ";
+                return food as T;
+            }
+            else if (name == "고추")
+            {
+                Food food = new Food();
+                food.name = "할라피뇨";
+                food.function = 100;
+                food.type = Item.ItemType.Food;
+                food.description = "매운맛에 이동속도가 오른다!";
+                return food as T;
+            }
+            else if (name == "빅맥")
+            {
+                Food food = new Food();
+                food.name = "빅맥";
+                food.function = 1000;
+                food.type = Item.ItemType.Food;
+                food.description = "참깨빵 위에 순쇠고기패티 두장 특별한소스 양상추 치즈피클양파까아지~~빠빠빠라빠";
+                return food as T;
+            }
+            else if (name == "랍스터")
+            {
+                Food food = new Food();
+                food.name = "랍슽터";
+                food.function = 15000;
+                food.type = Item.ItemType.Food;
+                food.description = "맛있겠다 바닷가제";
+                return food as T;
+            }
+            else if (name == "연어초밥")
+            {
+                Food food = new Food();
+                food.name = "연어초밥";
+                food.function = 10000;
+                food.type = Item.ItemType.Food;
+                food.description = "저..절대 제가 먹고싶은걸 적고있는게 아닙니다1";
                 return food as T;
             }
             #endregion

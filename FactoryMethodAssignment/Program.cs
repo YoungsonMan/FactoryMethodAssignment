@@ -37,6 +37,13 @@
 
             #region 음식
             Food food = ItemFactory.Instantiate<Food>("음식");
+            Food[] foods = new Food[5];
+            foods[0] = ItemFactory.Instantiate<Food>("짜장면");
+            foods[1] = ItemFactory.Instantiate<Food>("고추");
+            foods[2] = ItemFactory.Instantiate<Food>("빅맥");
+            foods[3] = ItemFactory.Instantiate<Food>("랍스터");
+            foods[4] = ItemFactory.Instantiate<Food>("연어초밥");
+
             #endregion
 
             #region 방어구
@@ -48,9 +55,9 @@
 
             // 포션
             Console.WriteLine($"아이템이름: {potion.name}\t\t타입: {potion.type}\t회복량: {potion.hp} \t설명: {potion.description}");                       // 포션
-            Console.WriteLine($"아이템이름: {potions[2].name}\t\t타입: {potions[2].type}\t회복량: {potions[2].hp} \t설명: {potions[2].description} ");      // 더큰포션
-            Console.WriteLine($"아이템이름: {potions[0].name}\t\t타입: {potions[0].type}\t회복량: {potions[0].hp} \t설명: {potions[0].description} ");      // 활력포션
-            Console.WriteLine($"아이템이름: {potions[1].name}\t\t타입: {potions[1].type}\t회복량: {potions[1].hp} \t설명: {potions[1].description} ");      // 엘릭서
+            Console.WriteLine($"아이템이름: {potions[0].name}\t\t타입: {potions[0].type}\t회복량: {potions[0].hp} \t설명: {potions[0].description} ");      // 더큰포션
+            Console.WriteLine($"아이템이름: {potions[1].name}\t\t타입: {potions[1].type}\t회복량: {potions[1].hp} \t설명: {potions[1].description} ");      // 활력포션
+            Console.WriteLine($"아이템이름: {potions[2].name}\t\t타입: {potions[2].type}\t회복량: {potions[2].hp} \t설명: {potions[2].description} ");      // 엘릭서
             Console.WriteLine($"아이템이름: {potions[3].name}\t\t타입: {potions[3].type}\t회복량: {potions[3].hp} \t설명: {potions[3].description} ");      // 보라포션
             Console.WriteLine($"아이템이름: {potions[4].name}\t\t타입: {potions[4].type}\t회복량: {potions[4].hp} \t설명: {potions[4].description} ");      // 랜덤포션
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
@@ -63,8 +70,13 @@
             Console.WriteLine($"아이템이름: {weapons[4].name}\t\t타입: {weapons[4].type}\t데미지: {weapons[4].damage} \t설명: {weapons[4].description} ");      // 최강의검
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             // 음식
-            Console.WriteLine($"아이템이름: {food.name}\t\t타입: {food.type}\t배부름: {food.function} \t설명: {food.description}");
-           
+            Console.WriteLine($"아이템이름: {food.name}\t\t타입: {food.type}\t배부름: {food.function} \t설명: {food.description}");                       // 음식
+            Console.WriteLine($"아이템이름: {foods[0].name}\t\t타입: {foods[0].type}\t맛있음: {foods[0].function} \t설명: {foods[0].description} ");      // 짜장면
+            Console.WriteLine($"아이템이름: {foods[1].name}\t\t타입: {foods[1].type}\t속도업: {foods[1].function} \t설명: {foods[1].description} ");      // 고추
+            Console.WriteLine($"아이템이름: {foods[2].name}\t\t타입: {foods[2].type}\t맛있음: {foods[2].function} \t설명: {foods[2].description} ");      // 빅맥
+            Console.WriteLine($"아이템이름: {foods[3].name}\t\t타입: {foods[3].type}\t맛있음: {foods[3].function} \t설명: {foods[3].description} ");      // 랍스터
+            Console.WriteLine($"아이템이름: {foods[4].name}\t\t타입: {foods[4].type}\t맛있음: {foods[4].function} \t설명: {foods[4].description} ");      // 연어초밥
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             // 방어구
             Console.WriteLine($"아이템이름: {armor.name}\t\t타입: {armor.type}\t방어력: {armor.defense}  \t설명: {armor.description}");
 

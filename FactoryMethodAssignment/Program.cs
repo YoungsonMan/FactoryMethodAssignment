@@ -48,6 +48,12 @@
 
             #region 방어구
             Armor armor = ItemFactory.Instantiate<Armor>("방어구");
+            Armor[] armors = new Armor[5];
+            armors[0] = ItemFactory.Instantiate<Armor>("방어십");
+            armors[1] = ItemFactory.Instantiate<Armor>("진짜쎈칼");
+            armors[2] = ItemFactory.Instantiate<Armor>("황금갑옷");
+            armors[3] = ItemFactory.Instantiate<Armor>("투명갑옷");
+            armors[4] = ItemFactory.Instantiate<Armor>("방어팔");
             #endregion
 
             #region Print
@@ -78,7 +84,12 @@
             Console.WriteLine($"아이템이름: {foods[4].name}\t\t타입: {foods[4].type}\t맛있음: {foods[4].function} \t설명: {foods[4].description} ");      // 연어초밥
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             // 방어구
-            Console.WriteLine($"아이템이름: {armor.name}\t\t타입: {armor.type}\t방어력: {armor.defense}  \t설명: {armor.description}");
+            Console.WriteLine($"아이템이름: {armor.name}\t\t타입: {armor.type}\t방어력: {armor.defense}  \t설명: {armor.description}");                      // 방어구
+            Console.WriteLine($"아이템이름: {armors[0].name}\t\t타입: {armors[0].type}\t방어력: {armors[0].defense} \t설명: {armors[0].description} ");      // 방어십
+            Console.WriteLine($"아이템이름: {armors[1].name}\t\t타입: {armors[1].type}\t방어력: {armors[1].defense} \t설명: {armors[1].description} ");      // 진짜쎈칼
+            Console.WriteLine($"아이템이름: {armors[2].name}\t\t타입: {armors[2].type}\t방어력: {armors[2].defense} \t설명: {armors[2].description} ");      // 황금갑옷
+            Console.WriteLine($"아이템이름: {armors[3].name}\t\t타입: {armors[3].type}\t방어력: {armors[3].defense} \t설명: {armors[3].description} ");      // 투명갑옷
+            Console.WriteLine($"아이템이름: {armors[4].name}\t타입: {armors[4].type}\t방어력: {armors[4].defense} \t설명: {armors[4].description} ");      // 방어팔
 
             Console.WriteLine("==========================================================================================================");
             #endregion

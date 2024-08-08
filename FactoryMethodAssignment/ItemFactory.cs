@@ -193,6 +193,51 @@ namespace FactoryMethodAssignment
                 armor.description = "";
                 return armor as T;
             }
+            else if (name == "방어십")
+            {
+                Armor armor = new Armor();
+                armor.name = "그냥옷";
+                armor.defense = 10;
+                armor.type = Item.ItemType.Armor;
+                armor.description = "방어력이 무려 나시티의 열배!";
+                return armor as T;
+            }
+            else if (name == "진짜쎈칼")
+            {
+                Armor armor = new Armor();
+                armor.name = "진짜쎈칼";
+                armor.defense = 1000;
+                armor.type = Item.ItemType.Armor;
+                armor.description = "최고의 방어는 공격!";
+                return armor as T;
+            }
+            else if (name == "황금갑옷")
+            {
+                Armor armor = new Armor();
+                armor.name = "황금갑옷";
+                armor.defense = 100;
+                armor.type = Item.ItemType.Armor;
+                armor.description = "반짝반짝빛이나는 갑옷";
+                return armor as T;
+            }
+            else if (name == "투명갑옷")
+            {
+                Armor armor = new Armor();
+                armor.name = "투명갑옷";
+                armor.defense = 10000;
+                armor.type = Item.ItemType.Armor;
+                armor.description = "원래 벗은게 더 쎼";
+                return armor as T;
+            }
+            else if (name == "방어팔")
+            {
+                Armor armor = new Armor();
+                armor.name = "더이상이름이";
+                armor.defense = 500;
+                armor.type = Item.ItemType.Armor;
+                armor.description = "이름이생각이안나... 도와줘요 기획팀!!!";
+                return armor as T;
+            }
 
             #endregion
 

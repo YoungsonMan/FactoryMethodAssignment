@@ -30,6 +30,9 @@ Laguage used - C#
 
 가독성을 위해서 클래스파일을 따로 빼서 작성.
 
+![FacotryPattern01](https://github.com/user-attachments/assets/a623a785-d50b-488f-9d84-29635ff8c9f7)
+
+
 ![FacotryPattern00](https://github.com/user-attachments/assets/a206fe65-3768-4ccb-b3ee-5fd612f15073)
 
 
